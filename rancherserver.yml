@@ -1,0 +1,17 @@
+#cloud-config     
+hostname: rancherserver
+rancher:     
+  network:             
+    dns:       
+      nameservers:
+      - 10.1.1.128            
+      - 10.2.1.223 
+      search:              
+      - kristianstad.se
+    interfaces:
+      eth0:
+        address: 10.3.1.146/22
+        dhcp: false                    
+        gateway: 10.3.1.254                                             
+        mtu: 1500
+        
